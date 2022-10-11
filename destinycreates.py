@@ -1,11 +1,12 @@
-import discord
-import random
-from discord.ext import commands
-import time
-from discord.utils import get
-import youtube_dl
-import praw
 import asyncio
+import random
+import time
+
+import discord
+import praw
+import youtube_dl
+from discord.ext import commands
+from discord.utils import get
 
 reddit = praw.Reddit(client_id='REDACTED',  # put your reddit API details here
                      client_secret='REDACTED',
@@ -208,7 +209,7 @@ async def unmute_error(ctx, error):
 @client.command()
 async def meme(ctx):
     global submission
-    memes_submissions = reddit.subreddit('memes').hot() # You can change this to whatever
+    memes_submissions = reddit.subreddit('memes').hot()
     post_to_pick = random.randint(1, 100)
     for i in range(0, post_to_pick):
         submission = next(x for x in memes_submissions if not x.stickied)
@@ -223,7 +224,7 @@ async def meme(ctx):
 @client.command()
 async def nsfw(ctx):
     global submission
-    nsfw_sub = reddit.subreddit('NSFW_GIF').hot() # You can also change this to whatever
+    nsfw_sub = reddit.subreddit('NSFW_GIF').hot()
     post_to_pick = random.randint(1, 100)
     for i in range(0, post_to_pick):
         submission = next(x for x in nsfw_sub if not x.stickied)
@@ -245,7 +246,8 @@ I stream all the time, check it here ----> http://j.gs/D1mt
 my personal website ----> http://j.gs/D1mv 
 my twitter ----> http://j.gs/D1mw 
 my buddy hengu ----> http://j.gs/D1mx
-and his twitter too ----> http://j.gs/D1n0''',  #Left my own links here as an example, you can change this to your stuff
+and his twitter too ----> http://j.gs/D1n0''',
+                               # Left my own links here as an example, you can change this to your stuff
                                colour=discord.Colour.red())
     linksembed.set_author(name=client.user.name, icon_url=client.user.avatar)
     linksembed.set_footer(text=ctx.author.name, icon_url=ctx.author.avatar)
@@ -261,18 +263,18 @@ async def play(ctx, url: str):
     try:
         voice_client = await ctx.author.voice.channel.connect()
         voice_clients[voice_client.guild.id] = voice_client
-    except:
+    except AttributeError:
         print("error")
     try:
         loop = asyncio.get_event_loop()
         data = await loop.run_in_executor(None, lambda: ytdl.extract_info(url, download=False))
         song = data["url"]
-        player = discord.FFmpegPCMAudio(song, **ffmpeg_options,
-                                        executable="ffmpeg\\ffmpeg.exe")  # add to path and remove
-        # executable portion, or put the ffmpeg folder inside the bot folder, and it will work.
+        player = discord.FFmpegPCMAudio(song, **ffmpeg_options)  # Designed for linux hosts, apt-get install ffmpeg, you
+        # won't need to specify executable. windows hosts, specify after options separated by comma, executable="Path
+        # to ffmpeg executable folder"
         voice_client.play(player)
         await ctx.send(embed=playerembed)
-    except:
+    except AttributeError:
         print("error")
 
 
