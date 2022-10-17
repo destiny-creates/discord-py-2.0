@@ -65,6 +65,7 @@ Note: For the mute command, you must have a "muted" role
 ?nsfw: Have some nsfw fun with gifs
 ?clear: Clears messaged (dont abuse or it will be rate limited)
 ?ping: Bot's ping
+?Bumper: Disboard Auto-Bump ;)
 """,
                               colour=discord.Colour.dark_gold())
     helpembed.set_author(name=client.user.name, icon_url=client.user.avatar)
@@ -304,6 +305,14 @@ async def stop(ctx):
     voice_clients[ctx.guild.id].stop()
     await voice_clients[ctx.guild.id].disconnect()
     await ctx.send(embed=stopembed)
+
+
+@client.command()
+async def bumper(ctx):
+    while True:
+        await ctx.send("/bump")
+        await ctx.send("See you in 2 hours :)")
+        time.sleep(7260)
 
 
 client.run(token)
