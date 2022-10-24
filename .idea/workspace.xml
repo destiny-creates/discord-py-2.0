@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da595ac0-f37a-4d70-a6cb-228cbd828b67" name="Changes" comment="&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;">
-      <change beforePath="$PROJECT_DIR$/.idea/discord-bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord-bot.iml" afterDir="false" />
+    <list default="true" id="da595ac0-f37a-4d70-a6cb-228cbd828b67" name="Changes" comment="Added auto-bump for disboard, use ?bumper&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/destinycreates.py" beforeDir="false" afterPath="$PROJECT_DIR$/destinycreates.py" afterDir="false" />
     </list>
     <list id="bd4870f9-7cec-4883-9ac0-b6585d7a357f" name="Changes by arcad" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665516405485</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added auto-bump for disboard, use ?bumper&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;">
+      <created>1665981970846</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665981970846</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,7 +99,8 @@
     <MESSAGE value="forgot the iml" />
     <MESSAGE value="Fixing voice commands, essentially adding the correct exception clause, and removing the ffmpeg option since my default host and design is for linux. windows users, read comment on line 271 for details" />
     <MESSAGE value="&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
+    <MESSAGE value="Added auto-bump for disboard, use ?bumper&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added auto-bump for disboard, use ?bumper&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

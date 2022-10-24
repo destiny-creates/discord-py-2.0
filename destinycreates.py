@@ -214,12 +214,8 @@ async def meme(ctx):
     post_to_pick = random.randint(1, 100)
     for i in range(0, post_to_pick):
         submission = next(x for x in memes_submissions if not x.stickied)
-    memeembed = discord.Embed(title='Here is a meme for ya!', description='meme inbound!',
-                              colour=discord.Colour.dark_gold(), url=submission.url)
-    memeembed.set_author(name=client.user.name, icon_url=client.user.avatar)
-    memeembed.set_image(url=submission.url)
-    memeembed.set_footer(text=ctx.author.name, icon_url=ctx.author.avatar)
-    await ctx.send(embed=memeembed)
+    await ctx.send(submission.url)
+    await ctx.send('\nEnjoy the meme ;)')
 
 
 @client.command()
@@ -229,12 +225,8 @@ async def nsfw(ctx):
     post_to_pick = random.randint(1, 100)
     for i in range(0, post_to_pick):
         submission = next(x for x in nsfw_sub if not x.stickied)
-    nsfwembed = discord.Embed(title='Here is a meme for ya!', description='meme inbound!',
-                              colour=discord.Colour.dark_gold(), url=submission.url)
-    nsfwembed.set_author(name=client.user.name, icon_url=client.user.avatar)
-    nsfwembed.set_image(url=submission.url)
-    nsfwembed.set_footer(text=ctx.author.name, icon_url=ctx.author.avatar)
-    await ctx.send(embed=nsfwembed)
+    await ctx.send(submission.url)
+    await ctx.send('\nEnjoy ;)')
 
 
 @client.command()
@@ -310,7 +302,7 @@ async def stop(ctx):
 @client.command()
 async def bumper(ctx):
     while True:
-        await ctx.send("/bump")
+        await ctx.send("!d bump")
         await ctx.send("See you in 2 hours :)")
         time.sleep(7260)
 
