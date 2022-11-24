@@ -230,6 +230,17 @@ async def nsfw(ctx):
 
 
 @client.command()
+async def nsfwlink(ctx):
+    global submission
+    nsfwlink_sub = reddit.subreddit('pornvids').hot()  # you can change this to whatever sub fits you
+    post_to_pick = random.randint(1, 1000)
+    for i in range(0, post_to_pick):
+        submission = next(x for x in nsfwlink_sub if not x.stickied)
+    await ctx.send(submission.url)
+    await ctx.send('\nEnjoy ;)')
+
+
+@client.command()
 async def links(ctx):
     linksembed = discord.Embed(title='Here are my links!', description='''looking for my links? here you are! 
 
@@ -297,14 +308,6 @@ async def stop(ctx):
     voice_clients[ctx.guild.id].stop()
     await voice_clients[ctx.guild.id].disconnect()
     await ctx.send(embed=stopembed)
-
-
-@client.command()
-async def bumper(ctx):
-    while True:
-        await ctx.send("!d bump")
-        await ctx.send("See you in 2 hours :)")
-        time.sleep(7260)
 
 
 client.run(token)
