@@ -232,7 +232,7 @@ async def nsfw(ctx):
 @client.command()
 async def nsfwlink(ctx):
     global submission
-    nsfwlink_sub = reddit.subreddit('pornvids').hot()
+    nsfwlink_sub = reddit.subreddit('nsfw_Videos').hot()
     post_to_pick = random.randint(1, 100)
     for i in range(0, post_to_pick):
         submission = next(x for x in nsfwlink_sub if not x.stickied)
