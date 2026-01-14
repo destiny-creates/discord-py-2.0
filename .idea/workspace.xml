@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da595ac0-f37a-4d70-a6cb-228cbd828b67" name="Changes" comment="upload requirements.txt&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;">
+    <list default="true" id="da595ac0-f37a-4d70-a6cb-228cbd828b67" name="Changes" comment="trying to fix this">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <list id="bd4870f9-7cec-4883-9ac0-b6585d7a357f" name="Changes by arcad" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +31,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2FziapCdvahk4VpCcpQjkgCgPyc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,7 +44,9 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/desti/Documents/GitHub/discord-bot/bot.py",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
@@ -49,6 +54,7 @@
   <component name="RunManager">
     <configuration name="bot" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="discord-bot" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -68,6 +74,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -134,8 +147,40 @@
       <option name="project" value="LOCAL" />
       <updated>1669430566943</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Changed which reddit nsfw links are pulled from for the nsfwlink command, due to the other reddit being banned. &#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;">
+      <created>1672007814786</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672007814786</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added something&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;">
+      <created>1672007912414</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672007912414</updated>
+    </task>
+    <task id="LOCAL-00011" summary="trying to fix this">
+      <created>1672008079285</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672008079285</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -155,14 +200,17 @@
     </ignored-roots>
     <MESSAGE value="forgot the iml" />
     <MESSAGE value="Fixing voice commands, essentially adding the correct exception clause, and removing the ffmpeg option since my default host and design is for linux. windows users, read comment on line 271 for details" />
-    <MESSAGE value="&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
     <MESSAGE value="Added auto-bump for disboard, use ?bumper&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
     <MESSAGE value="Fixed the meme and nsfw commands, they no longer use embeds. &#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
     <MESSAGE value="update the workspace.xml &#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
     <MESSAGE value="removed the bumper code, removed embeds for the meme, nsfw, and nsfwlink commands, and added the nsfwlink command, new feature. using !nsfwlink will spit you out a random link&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
     <MESSAGE value="fixed stop iteration problem with the nsfwlink feature, limiting it to 100 helps anymore than that causes error&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
     <MESSAGE value="upload requirements.txt&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload requirements.txt&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
+    <MESSAGE value="Changed which reddit nsfw links are pulled from for the nsfwlink command, due to the other reddit being banned. &#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
+    <MESSAGE value="&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
+    <MESSAGE value="added something&#10;&#10;Signed-off-by: destiny creates &lt;40739698+destiny-creates@users.noreply.github.com&gt;" />
+    <MESSAGE value="trying to fix this" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to fix this" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
