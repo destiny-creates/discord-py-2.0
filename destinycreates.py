@@ -219,46 +219,6 @@ async def meme(ctx):
 
 
 @client.command()
-async def nsfw(ctx):
-    global submission
-    nsfw_sub = reddit.subreddit('NSFW_GIF').hot()
-    post_to_pick = random.randint(1, 100)
-    for i in range(0, post_to_pick):
-        submission = next(x for x in nsfw_sub if not x.stickied)
-    await ctx.send(submission.url)
-    await ctx.send('\nEnjoy ;)')
-
-
-@client.command()
-async def nsfwlink(ctx):
-    global submission
-    nsfwlink_sub = reddit.subreddit('nsfw_Videos').hot()
-    post_to_pick = random.randint(1, 100)
-    for i in range(0, post_to_pick):
-        submission = next(x for x in nsfwlink_sub if not x.stickied)
-    await ctx.send(submission.url)
-    await ctx.send('\nEnjoy ;)')
-
-
-@client.command()
-async def links(ctx):
-    linksembed = discord.Embed(title='Here are my links!', description='''looking for my links? here you are! 
-
-My discord ----> http://q.gs/EvrQG 
-subscribe here: ----> http://q.gs/EvrQ6 
-I stream all the time, check it here ----> http://j.gs/D1mt 
-my personal website ----> http://j.gs/D1mv 
-my twitter ----> http://j.gs/D1mw 
-my buddy hengu ----> http://j.gs/D1mx
-and his twitter too ----> http://j.gs/D1n0''',
-                               # Left my own links here as an example, you can change this to your stuff
-                               colour=discord.Colour.red())
-    linksembed.set_author(name=client.user.name, icon_url=client.user.avatar)
-    linksembed.set_footer(text=ctx.author.name, icon_url=ctx.author.avatar)
-    await ctx.send(embed=linksembed)
-
-
-@client.command()
 async def play(ctx, url: str):
     global voice_client
     playerembed = discord.Embed(title="Now playing", description=f"Now playing: {url}", colour=discord.Colour.red())
