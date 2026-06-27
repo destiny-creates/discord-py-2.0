@@ -14,11 +14,11 @@ reddit = praw.Reddit(client_id='REDACTED',  # put your reddit API details here
 
 token = open("token.txt", "r").read()  # store token inside a txt in the same dir
 client = commands.Bot(command_prefix="?", intents=discord.Intents.all())
-name = 'REDACTED'  # This is the "name" of the description or game that the bot is playing, or livestream
-urltwitch = 'REDACTED'  # If you want the bot to show its streaming something, put that
+name = '!help for commands'  # This is the "name" of the description or game that the bot is playing, or livestream
+urltwitch = ''  # If you want the bot to show its streaming something, put that
 # link here
 client.remove_command('help')
-ROLE = "REDACTED"  # If you want autorole, put the role you want them to automatically be upon joining here
+ROLE = ""  # If you want autorole, put the role you want them to automatically be upon joining here
 voice_clients = {}
 yt_dl_opts = {"format": "bestaudio/best"}
 ytdl = youtube_dl.YoutubeDL(yt_dl_opts)
@@ -27,7 +27,8 @@ ffmpeg_options = {"options": "-vn -ab 128k -ac 2 -ar 44100 -acodec libmp3lame"} 
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Streaming(name=name, url=urltwitch))
+    #uncomment this line to enable stream mode await client.change_presence(status=discord.Status.online, activity=discord.Streaming(name=name, #url=urltwitch))
+    await client.change_presence(status=discord.Status.online, activity=discord.Streaming(name=name))
     print("Bot is ready.")
 
 
@@ -62,7 +63,6 @@ Note: For the mute command, you must have a "muted" role
 ?unmute: Unmutes user
 ?links: Check out my links!
 ?meme: Pulls a fresh reddit meme
-?nsfw: Have some nsfw fun with gifs
 ?clear: Clears messaged (dont abuse or it will be rate limited)
 ?ping: Bot's ping
 ?Bumper: Disboard Auto-Bump ;)
