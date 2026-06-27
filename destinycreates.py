@@ -28,7 +28,7 @@ ffmpeg_options = {"options": "-vn -ab 128k -ac 2 -ar 44100 -acodec libmp3lame"} 
 @client.event
 async def on_ready():
     #uncomment this line to enable stream mode await client.change_presence(status=discord.Status.online, activity=discord.Streaming(name=name, #url=urltwitch))
-    await client.change_presence(status=discord.Status.online, activity=discord.Streaming(name=name))
+    await client.change_presence(status=discord.Status.online)
     print("Bot is ready.")
 
 
