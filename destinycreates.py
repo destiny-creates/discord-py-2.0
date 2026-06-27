@@ -61,7 +61,6 @@ Note: For the mute command, you must have a "muted" role
 ?unban: Unbans a user
 ?mute: Mutes user
 ?unmute: Unmutes user
-?links: Check out my links!
 ?meme: Pulls a fresh reddit meme
 ?clear: Clears messaged (dont abuse or it will be rate limited)
 ?ping: Bot's ping
